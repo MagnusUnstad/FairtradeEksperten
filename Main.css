@@ -1,0 +1,49 @@
+/*
+#BDA242 gullfarge-sirkel
+#D4BB92 bakgrunnsfarge (off-white ish)
+
+https://color.adobe.com/nb/create/color-wheel/?base=2&rule=Analogous&selected=0&name=Mitt%20Color-tema&mode=rgb&rgbvalues=0.8813725490196079%2C0.87725384583309%2C0.6938402146310525%2C0.9213725490196079%2C0.7921023660595204%2C0.2762320924278659%2C0.8313725490196079%2C0.7333333333333333%2C0.5725490196078431%2C0.9213725490196079%2C0.4732455805345071%2C0.19855480349240115%2C0.8813725490196079%2C0.13747750267432515%2C0.03418489402943365&swatchOrder=0%2C1%2C2%2C3%2C4
+*/
+
+body {
+  background-color:#D4BB92;
+  margin: 0;
+  padding: 0;
+}
+
+.Navbar {
+  height: 75px;
+  background-color: #BDA242;
+  display: inline-block;
+  color: #E12309;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  font-size: 145%;
+  text-align: center;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.Navbar li {
+  display: inline-block;
+  width: 20%;
+  padding-top: 25px;
+}
+
+.Navbar a {
+  text-decoration: none;
+  color: #E12309;
+}
+
+.Navbar ul {
+  list-style: none;
+  margin: 0;
+}
+
+.sjokolade img {
+  display:block;
+  margin:auto;
+  max-width:300px;
+}
