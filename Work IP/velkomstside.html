@@ -29,7 +29,7 @@
 		#forsideBilde {
 			margin:0 auto;
 			display: block;
-			max-width:300px;
+			max-width:17%;
 			padding-top:6vw;
 			-webkit-filter: drop-shadow(5px 5px 5px #222);
 			filter: drop-shadow(5px 5px 5px #222);
@@ -53,14 +53,14 @@
 			width:50%;
 			text-align:center;
 			font-family: 'FallingSky', sans-serif;
+			margin-bottom:-70px; /* Må være samme som footer høyde */
 		}
 		
-		p {
+		#rightContent p, #leftContent p {
 			margin-top:0;
 			margin:0% 15% 0% 15%;
 			padding-top:15px;
 			font-family: 'FallingSkyCondensed', sans-serif;
-
 			font-size:130%;
 		}
 		
@@ -71,8 +71,27 @@
 			height:100%;
 			text-align:center;
 			font-family: 'FallingSky', sans-serif;
+			margin-bottom:-70px; /* Må være samme som footer høyde */
 		}
-
+		
+		.footer {
+			height:70px;
+			width:100%;
+			background-color:#333333;
+			display:inline-block;
+			color:#f2f2f2;
+			font-family: 'FallingSkyCondensed', sans-serif;
+			padding-left:8%;
+		}
+		
+		.footer a {
+			color:#f2f2f2;
+			text-decoration:none;
+		}
+		.footer a:hover {
+			color:#EB7933;
+		}
+		
 	</style>
 
 	<script>
@@ -152,6 +171,16 @@
 		Fair Trade er et handelssystem som fremmer bærekraftig og klimavennlig utvikling. Gjennom Fair Trade har millioner av småbønder og småprodusenter fått tilgang til ett større marked med færre fordyrende mellomledd og med forbrukere som er villig til å betale en mer rettferdig pris. Deres ansatte har fått bedre betaling og vilkår, og millioner av mennesker i Sør har kommet seg ut av fattigdom og ser nå en helt ny fremtid for seg selv og sine barn. Fordi Fair Trade innebærer langsiktige avtaler med bedre priser og lønninger enn i markedet forøvrig, blir det mulig for partene å investere i miljøvennelig produksjon. Fair Trade støtter manuell produksjon, økologisk jordbruk, gjenbruk av materiale og ressurser, samt bærekraftig bruk av naturressurser og produksjonsmetoder som er lite kapital- og oljekrevende. Fair Trade er et handelssystem som vil skape rettferdighet når det gjelder sosiale forhold, økonomi og miljø i verden.
 		</p>
 	
+	</div>
+	
+	
+	<div class="footer">
+		<p>
+			Kontakt oss:&nbsp;&nbsp; <!-- mellomrom -->
+			<a href="mailto:example@tutorialspark.com">post@fairtradeeksperten.no</a>
+			<br>
+			Tlf.: (+47) 928 60 927
+		</p>
 	</div>
 	
 	
