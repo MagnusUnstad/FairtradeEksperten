@@ -2,6 +2,7 @@
 	<link rel="stylesheet" href="animate.css">
 	<script src="jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 	
 		@font-face {
@@ -33,6 +34,7 @@
 		#forsideBilde {
 			margin:0 auto;
 			display: block;
+			min-width:16%;
 			max-width:16%;
 			padding-top:10%;
 			-webkit-filter: drop-shadow(5px 5px 5px #222);
@@ -51,13 +53,13 @@
 		}
 		
 		#leftContent {
-			height:100%;
+			min-height:100%;
 			background-color:E1E0B1;
 			float:left;
 			width:50%;
 			text-align:center;
 			font-family: 'FallingSky', sans-serif;
-			margin-bottom:-70px; /* Må være samme som footer høyde */
+			/* margin-bottom:-70px; Må være samme som footer høyde */
 		}
 		
 		#rightContent p, #leftContent p {
@@ -72,10 +74,10 @@
 			float:right;
 			width:50%;
 			background-color:ffffe3;
-			height:100%;
+			min-height:100%;
 			text-align:center;
 			font-family: 'FallingSky', sans-serif;
-			margin-bottom:-70px; /* Må være samme som footer høyde */
+			/* margin-bottom:-70px; Må være samme som footer høyde */
 		}
 		
 		.footer {
@@ -85,7 +87,6 @@
 			display:inline-block;
 			color:#f2f2f2;
 			font-family: 'FallingSkyCondensed', sans-serif;
-			
 		}
 		
 		.footer a {
@@ -111,6 +112,81 @@
 			position:absolute;
 			width:100%;
 			color:#333333;
+		}
+		
+		#linje1 {
+			height:5px;
+			width:100%;
+			display:inline-block;
+			background-color:#E1C69B;
+		}
+		#linje2 {
+			height:5px;
+			width:100%;
+			background-color:#D4BB92;
+		}
+		#linje3 {
+			height:5px;
+			width:100%;
+			background-color:#BAA580;
+		}
+		#side3 {
+			width:100%;
+			background-color:#948366;
+			text-align:center;
+			padding-bottom:5%;
+		}		
+		#side3 h2 {
+			font-family: 'FallingSky', sans-serif;
+			color:#333333;
+			margin:0;
+			padding-top:10px;
+		}
+		
+		#kunder {
+			text-align:center;
+			-webkit-box-align:center;
+			-webkit-box-pack:center;
+			display:-webkit-box;
+		}
+		
+		.img {
+			position: relative;
+			float: left;
+			max-width: 200px;
+			padding:2% 7% 2% 7%;
+			transition:all .5s ease-in-out;
+		}
+		.img:hover {
+			transform:scale(1.5);
+		}
+		/* Mobil stuff for responsiv side. Alt under her inntrer når viewporten er på mindre enn 720 px */
+		@media screen and (max-width: 700px){
+			#leftContent, #rightContent, .footer, .leftFooter, rightFooter {
+				float: none;
+				width:100%;
+			}
+			#leftContent h2, #rightContent h2 {
+				margin:0;
+			}
+			#forsideBilde {
+				max-height:600px;
+				min-width:200px;	
+				width:auto;
+			}
+			#buttons {
+				top:60%;
+			}
+			.img {
+				max-width:80px;
+				display:block;
+			}
+		}
+		
+		@media screen and (max-height: 400px) {
+			#forsideBilde {
+				min-width:16%;
+			}
 		}
 		
 	</style>
@@ -228,6 +304,21 @@
 	
 	</div>
 	
+	<div id="linje1">
+		
+	</div>
+	<div id="linje2"></div>
+	<div id="linje3"></div>
+	<div id="side3">
+		<h2>HER FINNER DU VÅRE PRODUKTER:</h2>
+		<div id="kunder">
+			<img class="img" src="kunder/asko.png" alt="Asko">
+			<img class="img" src="kunder/jacobs.png" alt="Jacobs">
+			<img class="img" src="kunder/scandic.png" alt="Scandic">
+			<img class="img" src="kunder/waynes.png" alt="Waynes Coffee">
+		</div>
+	</div>
+	
 	
 	<div class="footer">
 		<p class="leftFooter">
@@ -236,6 +327,9 @@
 			<br>
 			Tlf.: (+47) 928 60 927
 		</p>
+		
+
+		
 		
 		<p class="rightFooter">
 			Mer footertekst
