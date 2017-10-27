@@ -1,7 +1,17 @@
 <head>
 	<link rel="stylesheet" href="animate.css">
 	<script src="jquery-3.2.1.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
 	<style>
+	
+		@font-face {
+			font-family: FallingSky;
+			src: url("fallingskyexbd.otf") format("opentype");
+		}
+		@font-face {
+			font-family: FallingSkyCondensed;
+			src: url("fallingskycond.otf") format("opentype");
+		}
 
 		body {
 			margin:0;
@@ -16,13 +26,51 @@
 			background-color:rgba(255, 255, 255, 0.3);
 		}	
 
-		#content img {
+		#forsideBilde {
 			margin:0 auto;
 			display: block;
-			max-width:350px;
+			max-width:300px;
 			padding-top:6vw;
 			-webkit-filter: drop-shadow(5px 5px 5px #222);
 			filter: drop-shadow(5px 5px 5px #222);
+		}
+		
+		#pil {
+			max-width:80px;
+			margin:0 auto; left: 0; right: 0;
+			top:90%;
+			position:absolute;
+			transition:all .2s ease-in-out;
+		}
+		#pil:hover {
+			transform:scale(1.5);
+		}
+		
+		#leftContent {
+			height:100%;
+			background-color:E1E0B1;
+			float:left;
+			width:50%;
+			text-align:center;
+			font-family: 'FallingSky', sans-serif;
+		}
+		
+		p {
+			margin-top:0;
+			margin:0% 15% 0% 15%;
+			padding-top:15px;
+			font-family: 'FallingSkyCondensed', sans-serif;
+
+			font-size:130%;
+		}
+		
+		#rightContent {
+			float:right;
+			width:50%;
+			background-color:ffffe3;
+			height:100%;
+			text-align:center;
+			font-family: 'FallingSky', sans-serif;
 		}
 
 	</style>
@@ -58,7 +106,16 @@
 			$( "#forsideBilde" ).removeClass("fadeOutRight");
 			$( "#forsideBilde" ).addClass("fadeInLeft");
 		}
-
+		
+		
+		//Scrolling når man trykker på pilen
+        $(document).ready(function (){
+            $("#pil").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#leftContent").offset().top
+                }, 700); //Her justerer vi hvor fort den scroller
+            });
+        });
 
 	
 	</script>
@@ -71,5 +128,31 @@
 <body>
 	<div id="content">
 			<img src="../Bilder/oragemilkchocolate.png" class="animated fadeInLeft" id="forsideBilde" alt="Divine Orange Milk Chocolate">
+			
+			<img src="../Bilder/pil.png" alt="Gå ned" id="pil">
 	</div>
+	
+	<div id="leftContent">
+		<h2>
+			FAIRTRADEEKSPERTEN
+		</h2>
+	
+		<p>
+			FairtradeEksperten driver med import, salg og distribusjon av de beste Fairtrade-produktene og er stolt norsk distributør av de to britiske Fairtrade pionerene: Divine Chocolate og CaféDirect.
+			Vi har to nettbutikker: en for forhandlere og en for forbrukere (følg linkene over). Varene selges også av store og små forhandlere over hele Norge; butikker, kiosker, kaféer og restauranter som tilbyr disse flotte etiske produktene til sine fornøýde kunder.
+		</p>
+	</div>
+	
+	<div id="rightContent">
+		<h2>
+		HVA ER FAIRTRADE?
+		</h2>
+		
+		<p>
+		Fair Trade er et handelssystem som fremmer bærekraftig og klimavennlig utvikling. Gjennom Fair Trade har millioner av småbønder og småprodusenter fått tilgang til ett større marked med færre fordyrende mellomledd og med forbrukere som er villig til å betale en mer rettferdig pris. Deres ansatte har fått bedre betaling og vilkår, og millioner av mennesker i Sør har kommet seg ut av fattigdom og ser nå en helt ny fremtid for seg selv og sine barn. Fordi Fair Trade innebærer langsiktige avtaler med bedre priser og lønninger enn i markedet forøvrig, blir det mulig for partene å investere i miljøvennelig produksjon. Fair Trade støtter manuell produksjon, økologisk jordbruk, gjenbruk av materiale og ressurser, samt bærekraftig bruk av naturressurser og produksjonsmetoder som er lite kapital- og oljekrevende. Fair Trade er et handelssystem som vil skape rettferdighet når det gjelder sosiale forhold, økonomi og miljø i verden.
+		</p>
+	
+	</div>
+	
+	
 </body>
