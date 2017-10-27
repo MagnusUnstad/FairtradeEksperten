@@ -28,13 +28,9 @@
 	</style>
 
 	<script>
+	
+	//Bildekarusell
 		const bildeArr = ["../Bilder/cafeDirectCostaRica.png","../Bilder/oragemilkchocolate.png"]; //Legg til flere bilder her
-
-		//Bytter ut forsidebildet
-		window.onload = function() {
-		$("#forsideBilde").attr("src",bildeArr[1]);
-		}
-		
 		var intervall = setInterval(function(){ byttBilde() }, 8000); //Her justerer vi hvor lenge bildet blir stående (i millisekunder)
 
 		let i = 0; //Teller for byttBilde
