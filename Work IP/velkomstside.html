@@ -1,7 +1,7 @@
 <head>
 	<link rel="stylesheet" href="animate.css">
 	<script src="jquery-3.2.1.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 	<style>
 	
 		@font-face {
@@ -25,12 +25,16 @@
 			background-size:cover;
 			background-color:rgba(255, 255, 255, 0.3);
 		}	
+		
+		#content i:hover {
+			transform:scale(1.5);
+		}
 
 		#forsideBilde {
 			margin:0 auto;
 			display: block;
-			max-width:17%;
-			padding-top:6vw;
+			max-width:16%;
+			padding-top:10%;
 			-webkit-filter: drop-shadow(5px 5px 5px #222);
 			filter: drop-shadow(5px 5px 5px #222);
 		}
@@ -81,7 +85,7 @@
 			display:inline-block;
 			color:#f2f2f2;
 			font-family: 'FallingSkyCondensed', sans-serif;
-			padding-left:8%;
+			
 		}
 		
 		.footer a {
@@ -91,31 +95,62 @@
 		.footer a:hover {
 			color:#EB7933;
 		}
+
+		.rightFooter {
+			float:right;
+			margin-right:8%;
+		}
+		.leftFooter {
+			float:left;
+			margin-left:8%;
+		}
+		
+		#buttons {
+			text-align:center;
+			padding-top:43%;
+			position:absolute;
+			width:100%;
+			color:#333333;
+		}
 		
 	</style>
 
 	<script>
 	
 	//Bildekarusell
-		const bildeArr = ["../Bilder/cafeDirectCostaRica.png","../Bilder/oragemilkchocolate.png"]; //Legg til flere bilder her
+		const bildeArr = ["../Bilder/oragemilkchocolate.png","../Bilder/cafeDirectCostaRica.png","../Bilder/darkchocolate.png"]; //Første bilde bør være samme som er lenket i HTML
 		var intervall = setInterval(function(){ byttBilde() }, 8000); //Her justerer vi hvor lenge bildet blir stående (i millisekunder)
 
 		let i = 0; //Teller for byttBilde
 		function byttBilde() {
 			fadeOut();
-				setTimeout(function(){
-				fadeIn();
-				$("#forsideBilde").attr("src",bildeArr[i]);	
 				i++;
-				
 				if (i >= bildeArr.length) {
 					i = 0;
 				}
+				console.log(i);
+			
+				setTimeout(function(){
+				fadeIn();
+				$("#forsideBilde").attr("src",bildeArr[i]);	
+				
+
 			}, 500);
-		
-
 		}
-
+		
+		function forrigeBilde() {
+			fadeOut();
+			i--;
+			if (i<0) {
+				i = bildeArr.length-1;
+			}
+			
+			setTimeout(function(){
+			fadeIn();
+			$("#forsideBilde").attr("src",bildeArr[i]);	
+			
+			}, 500);
+		}
 		
 		function fadeOut() {
 			$( "#forsideBilde" ).removeClass("fadeInLeft");
@@ -134,6 +169,20 @@
                     scrollTop: $("#leftContent").offset().top
                 }, 700); //Her justerer vi hvor fort den scroller
             });
+			
+			
+			
+			$("#rightButton").click(function(){
+				clearInterval(intervall);
+				intervall = setInterval(function(){ byttBilde() }, 8000);
+				byttBilde();
+			});
+			$("#leftButton").click(function(){
+				clearInterval(intervall);
+				intervall = setInterval(function(){ byttBilde() }, 8000);
+				forrigeBilde();
+			});
+			
         });
 
 	
@@ -146,6 +195,12 @@
 
 <body>
 	<div id="content">
+			<div id="buttons">
+				<i class="fa fa-arrow-left" id="leftButton"></i><span style="display:inline-block; width:15px;"></span>
+				<i class="fa fa-arrow-right" id="rightButton"></i>
+			</div>
+	
+	
 			<img src="../Bilder/oragemilkchocolate.png" class="animated fadeInLeft" id="forsideBilde" alt="Divine Orange Milk Chocolate">
 			
 			<img src="../Bilder/pil.png" alt="Gå ned" id="pil">
@@ -175,12 +230,17 @@
 	
 	
 	<div class="footer">
-		<p>
+		<p class="leftFooter">
 			Kontakt oss:&nbsp;&nbsp; <!-- mellomrom -->
 			<a href="mailto:example@tutorialspark.com">post@fairtradeeksperten.no</a>
 			<br>
 			Tlf.: (+47) 928 60 927
 		</p>
+		
+		<p class="rightFooter">
+			Mer footertekst
+		</p>
+
 	</div>
 	
 	
