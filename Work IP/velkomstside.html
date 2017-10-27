@@ -1,33 +1,79 @@
-<style>
+<head>
+	<link rel="stylesheet" href="animate.css">
+	<script src="jquery-3.2.1.min.js"></script>
+	<style>
 
-body {
-	margin:0;
-}
-
-
-
-#content {
-	background-image:url(../Bilder/kuapafarmersbrianmoodylayer.jpg);
-	height:100%;
-	background-size:cover;
-	background-color:rgba(255, 255, 255, 0.3);
-}	
-
-#content img {
-	margin:0 auto;
-	display: block;
-	max-width:350px;
-	padding-top:6vw;
-	  -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
-}
+		body {
+			margin:0;
+		}
 
 
 
+		#content {
+			background-image:url(../Bilder/kuapafarmersbrianmoodylayer.jpg);
+			height:100%;
+			background-size:cover;
+			background-color:rgba(255, 255, 255, 0.3);
+		}	
+
+		#content img {
+			margin:0 auto;
+			display: block;
+			max-width:350px;
+			padding-top:6vw;
+			-webkit-filter: drop-shadow(5px 5px 5px #222);
+			filter: drop-shadow(5px 5px 5px #222);
+		}
+
+	</style>
+
+	<script>
+		const bildeArr = ["../Bilder/cafeDirectCostaRica.png","../Bilder/oragemilkchocolate.png"]; //Legg til flere bilder her
+
+		//Bytter ut forsidebildet
+		window.onload = function() {
+		$("#forsideBilde").attr("src",bildeArr[1]);
+		}
+		
+		var intervall = setInterval(function(){ byttBilde() }, 8000); //Her justerer vi hvor lenge bildet blir stående (i millisekunder)
+
+		let i = 0; //Teller for byttBilde
+		function byttBilde() {
+			fadeOut();
+				setTimeout(function(){
+				fadeIn();
+				$("#forsideBilde").attr("src",bildeArr[i]);	
+				i++;
+				
+				if (i >= bildeArr.length) {
+					i = 0;
+				}
+			}, 500);
+		
+
+		}
+
+		
+		function fadeOut() {
+			$( "#forsideBilde" ).removeClass("fadeInLeft");
+			$( "#forsideBilde" ).addClass("fadeOutRight");
+		}
+		function fadeIn() {
+			$( "#forsideBilde" ).removeClass("fadeOutRight");
+			$( "#forsideBilde" ).addClass("fadeInLeft");
+		}
 
 
+	
+	</script>
+	
+	
+	
+	
+</head>
 
-</style>
+<body>
 	<div id="content">
-			<img src="../Bilder/oragemilkchocolate.png" alt="Divine Orange Milk Chocolate">
+			<img src="../Bilder/oragemilkchocolate.png" class="animated fadeInLeft" id="forsideBilde" alt="Divine Orange Milk Chocolate">
 	</div>
+</body>
