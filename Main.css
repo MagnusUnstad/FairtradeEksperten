@@ -11,34 +11,43 @@ body {
 }
 
 .Navbar {
-  height: 75px;
+  height: auto;
   background-color: #BDA242;
-  display: inline-block;
-  color: #E12309;
+  color: white;
   margin: auto;
-  padding: 0;
   width: 100%;
-  font-size: 145%;
+  font-size: 17px;
   text-align: center;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  padding-bottom: 15px;
 }
 
 .Navbar li {
-  display: inline-block;
   width: 20%;
+  display: inline-block;
+  min-width: 140px;
   padding-top: 25px;
 }
 
 .Navbar a {
   text-decoration: none;
-  color: #E12309;
+  color: white;
 }
 
 .Navbar ul {
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .Navbar li {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
 }
 
 .sjokolade {
