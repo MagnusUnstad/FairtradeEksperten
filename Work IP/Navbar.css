@@ -4,23 +4,23 @@ body {
 }
 
 .Navbar {
-  height: 70px;
+  height: auto;
   background-color: #BDA242;
-  display: inline-block;
   color: white;
   margin: auto;
   width: 100%;
-  font-size: 20px;
+  font-size: 17px;
   text-align: center;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  padding-bottom: 15px;
 }
 
 .Navbar li {
+  width: 20%;
   display: inline-block;
-  width: 15%;
-  min-width: 200px;
+  min-width: 140px;
   padding-top: 25px;
 }
 
@@ -33,4 +33,12 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .Navbar li {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
 }
