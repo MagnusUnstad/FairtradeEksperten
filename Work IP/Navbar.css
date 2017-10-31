@@ -1,24 +1,46 @@
 body {
   margin: 0;
   padding: 0;
+
+}
+
+@font-face {
+  font-family: FallingSky;
+  src: url("fallingskyexbd.otf") format("opentype");
+}
+
+#Logo1 {
+  font-size: 30px;
+  font-family: 'Saira Semi Condensed', sans-serif;
+  display: inline-block;
+  color: #EB7933;
+  margin: 0;
+  padding-left: 65px;
+}
+
+#Logo2 {
+  font-size: 29.5px;
+  font-family: 'Oswald', sans-serif;
+  display: inline-block;
+  margin: 0;
+  padding-right: 65px;
 }
 
 .Navbar {
   height: auto;
-  background-color: #BDA242;
-  color: white;
+  background-color: #f2f2f2;
+  color: black;
   margin: auto;
   width: 100%;
   font-size: 20px;
   text-align: center;
   overflow: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: FallingSky;
   font-weight: bold;
   padding-bottom: 15px;
 }
 
 .Navbar li {
-  width: 15%;
   display: inline-block;
   min-width: 150px;
   padding-top: 25px;
@@ -26,7 +48,11 @@ body {
 
 .Navbar a {
   text-decoration: none;
-  color: white;
+  color: black;
+}
+
+.Navbar a:hover {
+  color: #EB7933;
 }
 
 .Navbar ul {
@@ -41,4 +67,9 @@ body {
     text-align: center;
     margin: auto;
   }
+}
+
+.content {
+  height: 1000px;
+  background-color: gray;
 }
