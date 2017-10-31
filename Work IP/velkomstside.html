@@ -70,7 +70,6 @@
 			padding-top:15px;
 			font-family: 'FallingSkyCondensed', sans-serif;
 			font-size:130%;
-
 		}
 		
 		#rightContent {
@@ -103,10 +102,6 @@
 			color:#EB7933;
 		}
 
-		.rightFooter {
-			float:right;
-			margin-right:8%;
-		}
 		.leftFooter {
 			float:left;
 			margin-left:8%;
@@ -128,8 +123,8 @@
 			padding-bottom:5%;
 			display:inline-block;
 			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-			
 		}		
+		
 		#side3 h2 {
 			font-family: 'FallingSky', sans-serif;
 			color:#333333;
@@ -177,6 +172,10 @@
 				max-width:80px;
 				display:block;
 			}
+			.leftFooter {
+				margin-left:0;
+				margin-top:0;
+			}
 		}
 		
 		@media screen and (max-height: 400px) {
@@ -184,24 +183,67 @@
 				min-width:16%;
 			}
 		}
-		
+
 	</style>
 
 	<script>
+	let i = 0; //Teller for byttBilde
+	const bildeArr = ["../Bilder/oragemilkchocolate.png","../Bilder/cafeDirectCostaRica.png","../Bilder/darkchocolate.png"]; //Første bilde bør være samme som er lenket i HTML
+
+		//Scrolling når man trykker på pilen
+        $(document).ready(function (){
+            $("#pil").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#leftContent").offset().top
+                }, 700); //Her justerer vi hvor fort den scroller
+            });
+			
+			
+			//Buttons
+			$("#rightButton").click(function(){
+				clearInterval(intervall);
+				intervall = setInterval(function(){ byttBilde() }, 8000);
+				byttBilde();
+				aktivSirkel();
+			});
+			$("#leftButton").click(function(){
+				clearInterval(intervall);
+				intervall = setInterval(function(){ byttBilde() }, 8000);
+				forrigeBilde();
+				aktivSirkel();
+			});	
+			
+			//Sirkelselektor
+			var sirkler = [];
+			function lagSirkler() {
+				for (let i=0;i<bildeArr.length;i++) {
+					sirkler.push('<i class="fa fa-circle-o"></i>&nbsp;')
+				}
+				document.getElementById("sirkelselektor").innerHTML = sirkler.join(',');
+			}
+			aktivSirkel();
+			
+			function aktivSirkel() {
+				sirkler = [];
+				lagSirkler();
+				sirkler[i] = '<i class="fa fa-circle"></i>&nbsp;';
+				document.getElementById("sirkelselektor").innerHTML = sirkler.join("");
+			}
+        
 	
 	//Bildekarusell
-		const bildeArr = ["../Bilder/oragemilkchocolate.png","../Bilder/cafeDirectCostaRica.png","../Bilder/darkchocolate.png"]; //Første bilde bør være samme som er lenket i HTML
-		var intervall = setInterval(function(){ byttBilde() }, 8000); //Her justerer vi hvor lenge bildet blir stående (i millisekunder)
+		var intervall = setInterval(function(){ byttBilde() }, 4000); //Her justerer vi hvor lenge bildet blir stående (i millisekunder)
 
-		let i = 0; //Teller for byttBilde
+		i = 0; //Teller for byttBilde
 		function byttBilde() {
 			fadeOut();
+			
 				i++;
+				aktivSirkel();
 				if (i >= bildeArr.length) {
 					i = 0;
 				}
-				console.log(i);
-			
+			aktivSirkel();
 				setTimeout(function(){
 				fadeIn();
 				$("#forsideBilde").attr("src",bildeArr[i]);	
@@ -209,6 +251,7 @@
 
 			}, 500);
 		}
+
 		
 		function forrigeBilde() {
 			fadeOut();
@@ -234,29 +277,8 @@
 		}
 		
 		
-		//Scrolling når man trykker på pilen
-        $(document).ready(function (){
-            $("#pil").click(function (){
-                $('html, body').animate({
-                    scrollTop: $("#leftContent").offset().top
-                }, 700); //Her justerer vi hvor fort den scroller
-            });
-			
-			
-			
-			$("#rightButton").click(function(){
-				clearInterval(intervall);
-				intervall = setInterval(function(){ byttBilde() }, 8000);
-				byttBilde();
-			});
-			$("#leftButton").click(function(){
-				clearInterval(intervall);
-				intervall = setInterval(function(){ byttBilde() }, 8000);
-				forrigeBilde();
-			});
-			
-        });
 
+});	
 	
 	</script>
 	
@@ -270,6 +292,7 @@
 			<div id="buttons">
 				<i class="fa fa-arrow-left" id="leftButton"></i><span style="display:inline-block; width:15px;"></span>
 				<i class="fa fa-arrow-right" id="rightButton"></i>
+				<div id="sirkelselektor"></div>
 			</div>
 	
 	
@@ -314,18 +337,13 @@
 	
 	<div class="footer">
 		<p class="leftFooter">
-			Kontakt oss:&nbsp;&nbsp; <!-- mellomrom -->
-			<a href="mailto:example@tutorialspark.com">post@fairtradeeksperten.no</a>
+			&nbsp;Kontakt oss:&nbsp;&nbsp; <!-- mellomrom -->
+			&nbsp;<a href="mailto:example@tutorialspark.com">post@fairtradeeksperten.no</a>
 			<br>
-			Tlf.: (+47) 928 60 927
+			&nbsp;Tlf.: (+47) 928 60 927
 		</p>
 		
 
-		
-		
-		<p class="rightFooter">
-			Mer footertekst
-		</p>
 
 	</div>
 	
