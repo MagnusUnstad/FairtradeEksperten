@@ -3,6 +3,7 @@
 	<script src="jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Navbar.css">
 	<style>
 	
 		@font-face {
@@ -45,7 +46,7 @@
 		#pil {
 			max-width:80px;
 			margin:0 auto; left: 0; right: 0;
-			top:90%;
+			top:92%;
 			position:absolute;
 			transition:all .2s ease-in-out;
 		}
@@ -228,7 +229,7 @@
         $(document).ready(function (){
             $("#pil").click(function (){
                 $('html, body').animate({
-                    scrollTop: $("#leftContent").offset().top
+                    scrollTop: $("#side1").offset().top //scroll hvor
                 }, 700); //Her justerer vi hvor fort den scroller
             });
 			
@@ -321,7 +322,23 @@
 	
 </head>
 
+
 <body>
+
+  <nav>
+    <div class="Navbar">
+      <ul>
+        <li class="Logo"><img src="../Bilder/fairtradeeksperten.png" alt="Fairtradeekspertens logo"></li>
+        <li class="Link"><a href="#">NETTBUTIKK</a></li>
+        <li class="Link"><a href="#">LINK 2</a></li>
+        <li class="Link"><a href="#">LINK 1</a></li>
+        <li class="Link"><a href="#">FORHANDLERE</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
 	<div id="content">
 			<div id="buttons">
 				<i class="fa fa-arrow-left" id="leftButton"></i><span style="display:inline-block; width:15px;"></span>

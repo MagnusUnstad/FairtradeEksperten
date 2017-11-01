@@ -17,7 +17,8 @@ body {
 
 .Navbar {
   height: auto;
-  background-color: #333333;
+  background-color: rgba(235,121,51,0.5);
+   background-color: rgba(55,55,55,0.7);
   color: black;
   margin: auto;
   width: 100%;
@@ -28,6 +29,8 @@ body {
   font-weight: bold;
   padding-bottom: 15px;
   padding-right: 50px;
+  position:absolute;
+  margin-bottom:-500px !important;
 }
 
 .Link {
