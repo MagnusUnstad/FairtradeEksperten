@@ -25,7 +25,7 @@
 			height:100%;
 			background-size:cover;
 			background-color:rgba(255, 255, 255, 0.3);
-			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 		}	
 		
 		#content i:hover {
@@ -60,11 +60,12 @@
 			width:50%;
 			text-align:center;
 			font-family: 'FallingSky', sans-serif;
-			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 			position:relative;
+			z-index:-3;
 		}
 		
-		#rightContent p, #leftContent p {
+		#rightContent p, #leftContent p, #side1 p, #side1 h2 {
 			margin-top:0;
 			margin:0% 15% 0% 15%;
 			padding-top:15px;
@@ -79,8 +80,9 @@
 			min-height:100%;
 			text-align:center;
 			font-family: 'FallingSky', sans-serif;
-			box-shadow: 0px 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 			position:relative;
+			z-index:-3;
 		}
 		
 		.footer {
@@ -91,7 +93,8 @@
 			color:#f2f2f2;
 			font-family: 'FallingSkyCondensed', sans-serif;
 			display:block;
-			
+			z-index:-4;
+			position:relative;
 		}
 		
 		.footer a {
@@ -115,14 +118,29 @@
 			color:#333333;
 		}
 		
+		#side1 {
+			padding:5% 0% 5% 0%;
+			z-index:-1;
+			position:relative;
+			background-color:#f2f2f2;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		}
+		
+		#contentContainer {
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+			z-index:-2;
+			position:relative;
+		}
 
 		#side3 {
 			width:100%;
-			background-color:#948366;
+			background-color:#f2f2f2;
 			text-align:center;
 			padding-bottom:5%;
 			display:inline-block;
-			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+			z-index:-3;
+			position:relative;
 		}		
 		
 		#side3 h2 {
@@ -301,7 +319,7 @@
 			<img src="../Bilder/pil.png" alt="Gå ned" id="pil">
 	</div>
 	
-	<div id="leftContent">
+	<div id="side1">
 		<h2>
 			FAIRTRADEEKSPERTEN
 		</h2>
@@ -309,20 +327,29 @@
 		<p>
 			FairtradeEksperten driver med import, salg og distribusjon av de beste Fairtrade-produktene og er stolt norsk distributør av de to britiske Fairtrade pionerene: Divine Chocolate og CaféDirect.
 			Vi har to nettbutikker: en for forhandlere og en for forbrukere (følg linkene over). Varene selges også av store og små forhandlere over hele Norge; butikker, kiosker, kaféer og restauranter som tilbyr disse flotte etiske produktene til sine fornøýde kunder.
-		</p>
+		</p>	
+	
 	</div>
 	
-	<div id="rightContent">
-		<h2>
-		HVA ER FAIRTRADE?
-		</h2>
+	<div id="contentContainer">
+		<div id="leftContent">
+			<h2>
+			HVA ER FAIRTRADE?
+			</h2>
+			
+			<p>
+			Fair Trade er et handelssystem som fremmer bærekraftig og klimavennlig utvikling. Gjennom Fair Trade har millioner av småbønder og småprodusenter fått tilgang til ett større marked med færre fordyrende mellomledd og med forbrukere som er villig til å betale en mer rettferdig pris. Deres ansatte har fått bedre betaling og vilkår, og millioner av mennesker i Sør har kommet seg ut av fattigdom og ser nå en helt ny fremtid for seg selv og sine barn. Fordi Fair Trade innebærer langsiktige avtaler med bedre priser og lønninger enn i markedet forøvrig, blir det mulig for partene å investere i miljøvennelig produksjon. Fair Trade støtter manuell produksjon, økologisk jordbruk, gjenbruk av materiale og ressurser, samt bærekraftig bruk av naturressurser og produksjonsmetoder som er lite kapital- og oljekrevende. Fair Trade er et handelssystem som vil skape rettferdighet når det gjelder sosiale forhold, økonomi og miljø i verden.
+			</p>
+		</div>
 		
-		<p>
-		Fair Trade er et handelssystem som fremmer bærekraftig og klimavennlig utvikling. Gjennom Fair Trade har millioner av småbønder og småprodusenter fått tilgang til ett større marked med færre fordyrende mellomledd og med forbrukere som er villig til å betale en mer rettferdig pris. Deres ansatte har fått bedre betaling og vilkår, og millioner av mennesker i Sør har kommet seg ut av fattigdom og ser nå en helt ny fremtid for seg selv og sine barn. Fordi Fair Trade innebærer langsiktige avtaler med bedre priser og lønninger enn i markedet forøvrig, blir det mulig for partene å investere i miljøvennelig produksjon. Fair Trade støtter manuell produksjon, økologisk jordbruk, gjenbruk av materiale og ressurser, samt bærekraftig bruk av naturressurser og produksjonsmetoder som er lite kapital- og oljekrevende. Fair Trade er et handelssystem som vil skape rettferdighet når det gjelder sosiale forhold, økonomi og miljø i verden.
-		</p>
-	
+		<div id="rightContent">
+			<!-- facebook! -->
+			<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsearch%2Ftop%2F%3Fq%3Dfairtradeeksperten&tabs=timeline&width=500&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=132579716841917" width="500" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+			
+			<!-- facebook slutt -->
+		
+		</div>
 	</div>
-	
 
 	<div id="side3">
 		<h2>HER FINNER DU VÅRE PRODUKTER:</h2>
