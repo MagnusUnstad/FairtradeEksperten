@@ -31,12 +31,8 @@ $(document).ready(function() {
 	
 
 	$( "#navbarButton" ).click(function() {
-		console.log("jasså");
 		$("#mobilNavbar").toggleClass("hiddenOnPhone");
 		$("#fairtradelogo").toggleClass("hiddenOnPhone");
-		$("#mobilNavbar").toggleClass("animated fadeInDown");
-
-		
 	});
 	
     //Sirkelselektor

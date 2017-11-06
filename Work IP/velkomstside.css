@@ -43,7 +43,7 @@ body {
 }
 #leftContent {
     min-height: 100vh;
-    background-color: E1E0B1;
+    background-color: #E1E0B1;
     float: left;
     width: 50%;
     text-align: center;
@@ -65,13 +65,17 @@ body {
 #rightContent {
     float: right;
     width: 50%;
-    background-color: ffffe3;
+    background-color: #ffffe3;
     min-height: 100vh;
     text-align: center;
     font-family: 'FallingSky', sans-serif;
-
     position: relative;
     z-index: 2;
+}
+#instagram {
+	max-width:80px;
+	margin:1%;
+	
 }
 .footer {
     height: 70px;
@@ -188,6 +192,7 @@ body {
     padding-bottom: 15px;
     /* padding-right: 50px; denne gir siden ekstra sidescroll */
     position: absolute;
+	
 }
 .Link {
     display: inline-block;
@@ -208,11 +213,16 @@ body {
     padding: 0;
 }
 @media screen and (max-width: 850px) {
+	.Navbar {
+		z-index:10;
+		padding-top:25vh;
+	}
     .Navbar li {
         display: block;
         text-align: center;
         margin: auto;
         padding: 5px;
+		z-index:10;
     }
     .Logo img {
         float: none;
@@ -221,10 +231,7 @@ body {
         padding: 10px;
     }
 }
-.content {
-    height: 1000px;
-    background-color: gray;
-}
+
 
 
 /* Mobil stuff for responsiv side.  */
@@ -255,7 +262,7 @@ body {
 
 
 	.hiddenOnPhone {
-		visibility:hidden;
+		display:none;
 	}
 	
     #leftContent,
@@ -269,11 +276,11 @@ body {
     #leftContent h2,
     #rightContent h2 {
         margin: 0;
+		padding-top:5%;
     }
     #forsideBilde {
-        max-height: 600px;
-        min-width: 150px;
-        padding-top: 250px;
+        max-width: 150px;
+        padding-top: 50%;
         z-index: 1;
         position: relative;
         width: auto;
@@ -292,10 +299,5 @@ body {
     #fbframe iframe {
         height: 300px;
         width: 300px;
-    }
-}
-@media screen and (max-height: 400px) {
-    #forsideBilde {
-        min-width: 16%;
     }
 }
