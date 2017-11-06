@@ -104,7 +104,7 @@ body {
 }
 #side1 {
     padding: 5% 0% 5% 0%;
-    z-index: -1;
+    z-index: 0;
     position: relative;
     background-color: #f2f2f2;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -151,54 +151,19 @@ body {
 .img:hover {
     transform: scale(1.5);
 }
-/* Mobil stuff for responsiv side. Alt under her inntrer når viewporten er på mindre enn 720 px */
 
-@media screen and (max-width: 700px) {
-    #leftContent,
-    #rightContent,
-    .footer,
-    .leftFooter,
-    rightFooter {
-        float: none;
-        width: 100%;
-    }
-    #leftContent h2,
-    #rightContent h2 {
-        margin: 0;
-    }
-    #forsideBilde {
-        max-height: 600px;
-        min-width: 150px;
-        padding-top: 250px;
-        z-index: 1;
-        position: relative;
-        width: auto;
-    }
-    #buttons {
-        top: 60%;
-    }
-    .img {
-        max-width: 80px;
-        display: block;
-    }
-    .leftFooter {
-        margin-left: 0;
-        margin-top: 0;
-    }
-    #fbframe iframe {
-        height: 300px;
-        width: 300px;
-    }
+
+
+
+
+#navbarButton span {
+	display:none; /* skjult på desktop */
+	color:#eeeeee;
+	padding-top:20px;
+	padding-left:20px;
+	font-size:300%;
+	
 }
-@media screen and (max-height: 400px) {
-    #forsideBilde {
-        min-width: 16%;
-    }
-}
-
-
-
-
 
 
 
@@ -211,7 +176,6 @@ body {
 }
 .Navbar {
     height: auto;
-    background-color: rgba(235, 121, 51, 0.5);
     background-color: rgba(55, 55, 55, 0.7);
     color: black;
     margin: auto;
@@ -260,4 +224,78 @@ body {
 .content {
     height: 1000px;
     background-color: gray;
+}
+
+
+/* Mobil stuff for responsiv side.  */
+
+@media screen and (max-width: 850px) {
+	
+	#navbarButton span {
+		display:block;
+		z-index:10;
+	}
+	#navbarButton {
+		text-align:center;
+		background-color: rgba(55, 55, 55, 0.7);
+		position:absolute;
+		z-index:11;
+		width:100%;
+	}
+	#navbarButton i {
+		float:left;
+		margin: 10px 0px 0px 10px;
+	}
+	#navbarButton img {
+		float:center;
+		max-width:200px;
+		margin-left:-10%;
+		overflow:hidden;	
+	}
+
+
+	.hiddenOnPhone {
+		visibility:hidden;
+	}
+	
+    #leftContent,
+    #rightContent,
+    .footer,
+    .leftFooter,
+    rightFooter {
+        float: none;
+        width: 100%;
+    }
+    #leftContent h2,
+    #rightContent h2 {
+        margin: 0;
+    }
+    #forsideBilde {
+        max-height: 600px;
+        min-width: 150px;
+        padding-top: 250px;
+        z-index: 1;
+        position: relative;
+        width: auto;
+    }
+    #buttons {
+        top: 60%;
+    }
+    .img {
+        max-width: 80px;
+        display: block;
+    }
+    .leftFooter {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    #fbframe iframe {
+        height: 300px;
+        width: 300px;
+    }
+}
+@media screen and (max-height: 400px) {
+    #forsideBilde {
+        min-width: 16%;
+    }
 }
