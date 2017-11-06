@@ -1,0 +1,263 @@
+@font-face {
+    font-family: FallingSky;
+    src: url("fallingskyexbd.otf") format("opentype");
+}
+@font-face {
+    font-family: FallingSkyCondensed;
+    src: url("fallingskycond.otf") format("opentype");
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+#content {
+    background-image: url(../Bilder/kuapafarmersbrianmoodylayer.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#content i:hover {
+    transform: scale(1.5);
+}
+#forsideBilde {
+    margin: 0 auto;
+    display: block;
+    min-width: 16%;
+    max-width: 16%;
+    padding-top: 10%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+#pil {
+    max-width: 80px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 92%;
+    position: absolute;
+    transition: all .2s ease-in-out;
+}
+#pil:hover {
+    transform: scale(1.5);
+}
+#leftContent {
+    min-height: 100vh;
+    background-color: E1E0B1;
+    float: left;
+    width: 50%;
+    text-align: center;
+    font-family: 'FallingSky', sans-serif;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    position: relative;
+    z-index: 2;
+}
+#rightContent p,
+#leftContent p,
+#side1 p,
+#side1 h2 {
+    margin-top: 0;
+    margin: 0% 15% 0% 15%;
+    padding-top: 15px;
+    font-family: 'FallingSkyCondensed', sans-serif;
+    font-size: 130%;
+}
+#rightContent {
+    float: right;
+    width: 50%;
+    background-color: ffffe3;
+    min-height: 100vh;
+    text-align: center;
+    font-family: 'FallingSky', sans-serif;
+
+    position: relative;
+    z-index: 2;
+}
+.footer {
+    height: 70px;
+    width: 100%;
+    background-color: #333333;
+    display: inline-block;
+    color: #f2f2f2;
+    font-family: 'FallingSkyCondensed', sans-serif;
+    display: block;
+    z-index: 1;
+    position: relative;
+}
+.footer a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #EB7933;
+}
+.leftFooter {
+    float: left;
+    margin-left: 8%;
+}
+#buttons {
+    text-align: center;
+    padding-top: 43%;
+    position: absolute;
+    width: 100%;
+    color: #333333;
+}
+#side1 {
+    padding: 5% 0% 5% 0%;
+    z-index: -1;
+    position: relative;
+    background-color: #f2f2f2;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#contentContainer {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    z-index: 3;
+    position: relative;
+}
+#side3 {
+    width: 100%;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding-bottom: 5%;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    z-index: 2;
+    position: relative;
+}
+#side3 h2 {
+    font-family: 'FallingSky', sans-serif;
+    color: #333333;
+    margin: 0;
+    padding-top: 2%;
+}
+#kunder {
+    text-align: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    display: -webkit-box;
+}
+#fbframe iframe {
+    padding-top: 5%;
+    position: relative;
+    z-index: 2;
+}
+.img {
+    position: relative;
+    float: left;
+    max-width: 200px;
+    padding: 2% 7% 2% 7%;
+    transition: all .5s ease-in-out;
+}
+.img:hover {
+    transform: scale(1.5);
+}
+/* Mobil stuff for responsiv side. Alt under her inntrer når viewporten er på mindre enn 720 px */
+
+@media screen and (max-width: 700px) {
+    #leftContent,
+    #rightContent,
+    .footer,
+    .leftFooter,
+    rightFooter {
+        float: none;
+        width: 100%;
+    }
+    #leftContent h2,
+    #rightContent h2 {
+        margin: 0;
+    }
+    #forsideBilde {
+        max-height: 600px;
+        min-width: 150px;
+        padding-top: 250px;
+        z-index: 1;
+        position: relative;
+        width: auto;
+    }
+    #buttons {
+        top: 60%;
+    }
+    .img {
+        max-width: 80px;
+        display: block;
+    }
+    .leftFooter {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    #fbframe iframe {
+        height: 300px;
+        width: 300px;
+    }
+}
+@media screen and (max-height: 400px) {
+    #forsideBilde {
+        min-width: 16%;
+    }
+}
+
+
+
+
+
+
+
+
+.Logo img {
+    height: 65px;
+    float: left;
+    padding-left: 5%;
+    padding-top: 10px;
+}
+.Navbar {
+    height: auto;
+    background-color: rgba(235, 121, 51, 0.5);
+    background-color: rgba(55, 55, 55, 0.7);
+    color: black;
+    margin: auto;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    overflow: hidden;
+    font-family: FallingSky;
+    font-weight: bold;
+    padding-bottom: 15px;
+    /* padding-right: 50px; denne gir siden ekstra sidescroll */
+    position: absolute;
+}
+.Link {
+    display: inline-block;
+    width: 12%;
+    min-width: 130px;
+    padding-top: 35px;
+}
+.Navbar a {
+    text-decoration: none;
+    color: white;
+}
+.Navbar a:hover {
+    color: #EB7933;
+}
+.Navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 850px) {
+    .Navbar li {
+        display: block;
+        text-align: center;
+        margin: auto;
+        padding: 5px;
+    }
+    .Logo img {
+        float: none;
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+    }
+}
+.content {
+    height: 1000px;
+    background-color: gray;
+}
