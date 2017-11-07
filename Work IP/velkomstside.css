@@ -18,23 +18,24 @@ body {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 #content i:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
+	
 }
 #forsideBilde {
     margin: 0 auto;
     display: block;
-    min-width: 16%;
-    max-width: 16%;
-    padding-top: 10%;
+    width: 16%;
+    padding-top: 8%;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
+	
 }
 #pil {
     font-size:3em;
 	text-align:center;
     left: 0;
     right: 0;
-    bottom: 0.5em;
+    bottom: -1em;
     position: absolute;
     transition: all .2s ease-in-out;
 	color: #333333;
@@ -76,7 +77,6 @@ body {
 #instagram {
 	max-width:80px;
 	margin:1%;
-	
 }
 .footer {
     height: 70px;
@@ -102,10 +102,11 @@ body {
 }
 #buttons {
     text-align: center;
-    padding-top:20%;
+    bottom: 10%;
     position: absolute;
     width: 100%;
     color: #333333;
+	z-index:10;
 }
 #side1 {
     padding: 5% 0% 5% 0%;
@@ -217,7 +218,7 @@ body {
 @media screen and (max-width: 850px) {
 	.Navbar {
 		z-index:10;
-		padding-top:25vh;
+		padding-top:100px;
 	}
     .Navbar li {
         display: block;
@@ -270,24 +271,26 @@ body {
     #leftContent,
     #rightContent,
     .footer,
-    .leftFooter,
-    rightFooter {
+    .leftFooter
+    {
         float: none;
         width: 100%;
+		text-align:left;
     }
     #leftContent h2,
     #rightContent h2 {
         margin: 0;
 		padding-top:5%;
+		text-align:center;
     }
     #forsideBilde {
-        max-width: 150px;
-        padding-top: 30%;
-        z-index: 1;
-        width: auto;
+        
+        padding-top: 18vh;
+        width:28vh;	
+		
     }
     #buttons {
-        top: 60%;
+        bottom: 15%;
     }
     .img {
         max-width: 80px;

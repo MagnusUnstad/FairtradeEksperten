@@ -27,12 +27,11 @@ $(document).ready(function() {
         forrigeBilde();
         aktivSirkel();
     });
-	
-	
 
 	$( "#navbarButton" ).click(function() {
 		$("#mobilNavbar").toggleClass("hiddenOnPhone");
 		$("#fairtradelogo").toggleClass("hiddenOnPhone");
+		
 	});
 	
     //Sirkelselektor
