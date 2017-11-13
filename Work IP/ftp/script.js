@@ -1,7 +1,7 @@
 //Script av Odin Andberg andberg.xyz
 
 let i = 0; //Teller for byttBilde
-const bildeArr = ["Bilder/oragemilkchocolate.png", "Bilder/divinechocolateraspberries.png", "Bilder/divinetoffeeandsalt.png", "Bilder/samlebilde.png", "Bilder/cafedirectmachupicchu.png" ]; //Første bilde bør være samme som er lenket i HTML
+const bildeArr = ["Bilder/divinetoffeeandsalt.png", "Bilder/divinechocolateraspberries.png", "Bilder/cafedirectmachupicchu.png", "Bilder/oragemilkchocolate.png"]; //Første bilde bør være samme som er lenket i HTML
 
 
 $(document).ready(function() {
@@ -62,7 +62,7 @@ $(document).ready(function() {
     //Bildekarusell
     var intervall = setInterval(function() {
         byttBilde()
-    }, 4000); //Her justerer vi hvor lenge bildet blir stående (i millisekunder)
+    }, 5000); //Her justerer vi hvor lenge bildet blir stående (i millisekunder)
 
     i = 0; //Teller for byttBilde
     function byttBilde() {
