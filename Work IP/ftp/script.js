@@ -1,10 +1,14 @@
 //Script av Odin Andberg andberg.xyz
 
 let i = 0; //Teller for byttBilde
-const bildeArr = ["Bilder/oragemilkchocolate.png", "Bilder/cafeDirectCostaRica.png", "Bilder/darkchocolate.png"]; //Første bilde bør være samme som er lenket i HTML
+const bildeArr = ["Bilder/oragemilkchocolate.png", "Bilder/divinechocolateraspberries.png", "Bilder/divinetoffeeandsalt.png", "Bilder/samlebilde.png", "Bilder/cafedirectmachupicchu.png" ]; //Første bilde bør være samme som er lenket i HTML
 
-//Scrolling når man trykker på pilen
+
 $(document).ready(function() {
+	
+	
+	
+	//Scrolling på piltrykk
     $("#pil").click(function() {
         $('html, body').animate({
             scrollTop: $("#side1").offset().top //scroll hvor
@@ -102,7 +106,9 @@ $(document).ready(function() {
         $("#forsideBilde").removeClass("fadeOutRight");
         $("#forsideBilde").addClass("fadeInLeft");
     }
-
-
+	
 
 });
+
+
+
