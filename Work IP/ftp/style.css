@@ -352,7 +352,7 @@ img[data-src] {
     #forsideBilde {
         
         padding-top: 18vh;
-        width:28vh;	
+        max-width:33%;	
 		
     }
     #buttons {
