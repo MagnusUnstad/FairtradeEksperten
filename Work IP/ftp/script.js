@@ -1,7 +1,7 @@
 //Script av Odin Andberg andberg.xyz
 
 let i = 0; //Teller for byttBilde
-const bildeArr = ["Bilder/divinetoffeeandsalt.png", "Bilder/divinechocolateraspberries.png", "Bilder/cafedirectmachupicchu.png", "Bilder/oragemilkchocolate.png"]; //Første bilde bør være samme som er lenket i HTML
+const bildeArr = ["Bilder/divinetoffeeandsalt.png", "Bilder/divinechocolateraspberries.png", "Bilder/cafedirectmachupicchu.png", "Bilder/divineadventcalendar.png"]; //Første bilde bør være samme som er lenket i HTML
 
 
 $(document).ready(function() {
